@@ -47,7 +47,14 @@ namespace GoLogger
                 return;
             }
 
-            cmdSQL += "insert into ";
+            cmdSQL += $"insert into {tbDBTable.Text}('";
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                if (checkedListBox1.GetItemChecked(i))
+                {
+                    cmdSQL += (checkedListBox1.Items[i].ToString()+"','");
+                }
+            }
             MessageBox.Show(cmdSQL);
         }
     }

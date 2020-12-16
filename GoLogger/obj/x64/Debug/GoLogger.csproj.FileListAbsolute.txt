@@ -11,3 +11,16 @@ D:\C#\GoLogger\GoLogger\obj\x64\Debug\GoLogger.CreateTable.resources
 D:\C#\GoLogger\GoLogger\obj\x64\Debug\GoLogger.csprojAssemblyReference.cache
 D:\C#\GoLogger\GoLogger\obj\x64\Debug\GoLogger.YieldReport.resources
 D:\C#\GoLogger\GoLogger\obj\x64\Debug\GoLogger.dataFormatFr.resources
+D:\Git\GoLogger\GoLogger\bin\x64\Debug\GoLogger.exe.config
+D:\Git\GoLogger\GoLogger\bin\x64\Debug\GoLogger.exe
+D:\Git\GoLogger\GoLogger\bin\x64\Debug\GoLogger.pdb
+D:\Git\GoLogger\GoLogger\obj\x64\Debug\GoLogger.csprojAssemblyReference.cache
+D:\Git\GoLogger\GoLogger\obj\x64\Debug\GoLogger.CreateTable.resources
+D:\Git\GoLogger\GoLogger\obj\x64\Debug\GoLogger.dataFormatFr.resources
+D:\Git\GoLogger\GoLogger\obj\x64\Debug\GoLogger.MainFr.resources
+D:\Git\GoLogger\GoLogger\obj\x64\Debug\GoLogger.Properties.Resources.resources
+D:\Git\GoLogger\GoLogger\obj\x64\Debug\GoLogger.YieldReport.resources
+D:\Git\GoLogger\GoLogger\obj\x64\Debug\GoLogger.csproj.GenerateResource.cache
+D:\Git\GoLogger\GoLogger\obj\x64\Debug\GoLogger.csproj.CoreCompileInputs.cache
+D:\Git\GoLogger\GoLogger\obj\x64\Debug\GoLogger.exe
+D:\Git\GoLogger\GoLogger\obj\x64\Debug\GoLogger.pdb
