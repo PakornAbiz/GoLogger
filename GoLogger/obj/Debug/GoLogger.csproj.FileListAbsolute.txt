@@ -1,0 +1,10 @@
+D:\C#\GoLogger\GoLogger\bin\Debug\GoLogger.exe.config
+D:\C#\GoLogger\GoLogger\bin\Debug\GoLogger.exe
+D:\C#\GoLogger\GoLogger\bin\Debug\GoLogger.pdb
+D:\C#\GoLogger\GoLogger\obj\Debug\GoLogger.csprojAssemblyReference.cache
+D:\C#\GoLogger\GoLogger\obj\Debug\GoLogger.Form1.resources
+D:\C#\GoLogger\GoLogger\obj\Debug\GoLogger.Properties.Resources.resources
+D:\C#\GoLogger\GoLogger\obj\Debug\GoLogger.csproj.GenerateResource.cache
+D:\C#\GoLogger\GoLogger\obj\Debug\GoLogger.csproj.CoreCompileInputs.cache
+D:\C#\GoLogger\GoLogger\obj\Debug\GoLogger.exe
+D:\C#\GoLogger\GoLogger\obj\Debug\GoLogger.pdb

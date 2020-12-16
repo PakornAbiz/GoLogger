@@ -1,0 +1,9 @@
+D:\C#\GoLogger\GoLogger\bin\x64\Release\GoLogger.exe.config
+D:\C#\GoLogger\GoLogger\bin\x64\Release\GoLogger.exe
+D:\C#\GoLogger\GoLogger\bin\x64\Release\GoLogger.pdb
+D:\C#\GoLogger\GoLogger\obj\x64\Release\GoLogger.Form1.resources
+D:\C#\GoLogger\GoLogger\obj\x64\Release\GoLogger.Properties.Resources.resources
+D:\C#\GoLogger\GoLogger\obj\x64\Release\GoLogger.csproj.GenerateResource.cache
+D:\C#\GoLogger\GoLogger\obj\x64\Release\GoLogger.csproj.CoreCompileInputs.cache
+D:\C#\GoLogger\GoLogger\obj\x64\Release\GoLogger.exe
+D:\C#\GoLogger\GoLogger\obj\x64\Release\GoLogger.pdb
