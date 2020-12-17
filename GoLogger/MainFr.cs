@@ -18,6 +18,9 @@ namespace GoLogger
         List<int> indexDivision;
         CreateTable createTable = null;
         ConnectDB connectDB = null;
+        string commandSQL = string.Empty;
+        List<int> indexColumnSQL;
+        dataFormatFr formatFr = null;
         public string OKStatus { get; set; }
         public string NGStatus { get; set; }
         private bool loopData { get; set; }
@@ -188,6 +191,37 @@ namespace GoLogger
                         ));
                     }
                     stdList.Clear();
+                }
+
+                if (btnConnectDB.Text == "Disconnect")
+                {
+                    commandSQL = formatFr.cmdSQL;
+                    for (int i = 0; i < indexColumnSQL.Count; i++)
+                    {
+                        if (i != indexColumnSQL.Count-1)
+                        {
+                            commandSQL += (dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[indexColumnSQL[i]].Value.ToString() + "','");
+                        }
+                        else
+                        {
+                            commandSQL += (dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[indexColumnSQL[i]].Value.ToString() + "')");
+                        }
+                    }
+                    if (connectDB.SQLIsConnect)
+                    {
+                        try
+                        {
+                            connectDB.insert(commandSQL);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Error insert Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Database disconect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -535,8 +569,17 @@ namespace GoLogger
 
         private void btnSetDataFormat_Click(object sender, EventArgs e)
         {
-            dataFormatFr formatFr = new dataFormatFr(ref dataGridView1);
+            formatFr = new dataFormatFr(ref dataGridView1);
             formatFr.ShowDialog();
+            if (formatFr.DialogResult == DialogResult.OK)
+            {
+                commandSQL = formatFr.cmdSQL;
+                indexColumnSQL = new List<int>(formatFr.indexList.Count);
+                for (int i = 0; i < formatFr.indexList.Count; i++)
+                {
+                    indexColumnSQL.Add(formatFr.indexList[i]);
+                }
+            }
         }
     }
 }

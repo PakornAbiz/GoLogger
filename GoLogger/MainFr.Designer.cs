@@ -633,7 +633,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainFr";
-            this.Text = "GoLogger(Beta v0.1.3)";
+            this.Text = "GoLogger(Beta v0.2.0)";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFr_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

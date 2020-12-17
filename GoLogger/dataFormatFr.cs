@@ -14,9 +14,11 @@ namespace GoLogger
     {
         List<object> tranferColumns;
         public string cmdSQL = string.Empty;
+        public List<int> indexList;
         public dataFormatFr(ref DataGridView Dg)
         {
             tranferColumns = new List<object>(Dg.Columns.Count);
+            indexList = new List<int>();
             for (int i = 0; i < Dg.Columns.Count; i++)
             {
                 tranferColumns.Add(Dg.Columns[i].Name);
@@ -35,11 +37,17 @@ namespace GoLogger
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.No;
-            this.Close(); 
+            this.Close();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(tbDBTable.Text))
+            {
+                MessageBox.Show("Please insert table name");
+                return;
+            }
+            cmdSQL = string.Empty;
             if (checkedListBox1.Items.Count == 0)
             {
                 MessageBox.Show("Can not generate SQL please create table", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -47,15 +55,27 @@ namespace GoLogger
                 return;
             }
 
-            cmdSQL += $"insert into {tbDBTable.Text}('";
+
+            cmdSQL += $"insert into {tbDBTable.Text}(";
             for (int i = 0; i < checkedListBox1.Items.Count; i++)
             {
                 if (checkedListBox1.GetItemChecked(i))
                 {
-                    cmdSQL += (checkedListBox1.Items[i].ToString()+"','");
+                    indexList.Add(i);
                 }
             }
-            MessageBox.Show(cmdSQL);
+            for (int i = 0; i < indexList.Count; i++)
+            {
+                if (i != indexList.Count - 1)
+                {
+                    cmdSQL += (checkedListBox1.Items[indexList[i]].ToString() + ",");
+                }
+                else
+                {
+                    cmdSQL += (checkedListBox1.Items[indexList[i]].ToString() + ") values('");
+                }
+            }
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
